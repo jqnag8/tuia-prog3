@@ -18,12 +18,12 @@ class BreadthFirstSearch:
         # Initialize root node
         root = Node("", state=grid.initial, cost=0, parent=None, action=None)
 
+
         # Initialize reached with the initial state
         reached = {}
         reached[root.state] = True
 
         # Initialize frontier with the root node
-        # TODO Complete the rest!!
-        # ...
-
+        frontier = QueueFrontier
+        
         return NoSolution(reached)
