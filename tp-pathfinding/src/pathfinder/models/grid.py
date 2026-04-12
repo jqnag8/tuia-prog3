@@ -111,3 +111,12 @@ class Grid:
 
     def __repr__(self) -> str:
         return f"Grid([[...], ...], {self.initial}, {self.end})"
+    
+    def manhattan(self, node_state: tuple[int, int])->int:
+        """Get the distance between the goal and the node state"""
+
+        dx:int= abs(node_state[0]-self.end[0])
+        dy:int= abs(node_state[1]-self.end[1])
+
+        return dx+dy
+
